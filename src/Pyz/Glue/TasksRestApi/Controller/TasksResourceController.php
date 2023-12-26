@@ -21,7 +21,7 @@ class TasksResourceController extends AbstractController
 {
     public function getAction(RestRequestInterface $restRequest): RestResponseInterface
     {
-//        dd($restRequest->getHttpRequest()->get('test'));
+        dd($restRequest->getResource());
         return (new RestResponse);
     }
 }

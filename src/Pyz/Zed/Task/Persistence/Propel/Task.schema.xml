@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<database name="zed" defaultIdMethod="native">
+    <table name="spy_tasks">
+        <column name="id" type="INTEGER" autoIncrement="true" required="true" primaryKey="true"/>
+        <column name="fk_user" type="INTEGER"/>
+        <column name="title" type="VARCHAR" size="255" required="true"/>
+        <column name="description" type="LONGVARCHAR"/>
+        <column name="due_date" type="TIMESTAMP"/>
+        <column name="status" type="VARCHAR" size="100"/>
+        <column name="created_at" type="TIMESTAMP"/>
+        <column name="tags" type="JSON"/>
+
+        <foreign-key name="spy_tasks-fk_user" foreignTable="spy_user">
+            <reference local="fk_user" foreign="id_user"/>
+        </foreign-key>
+    </table>
+</database>

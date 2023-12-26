@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <transfers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
     <transfer name="RestTasksAttributes" strict="true">
+        <property name="id" type="int" />
         <property name="title" type="string" />
         <property name="description" type="string" />
         <property name="dueDate" type="string" />
         <property name="status" type="string" />
         <property name="board" type="string" />
-        <property name="tags" type="array" singular="tag" />
+        <property name="tags" type="string[]" singular="tag" />
+        <property name="createdAt" type="string"/>
     </transfer>
 </transfers>
