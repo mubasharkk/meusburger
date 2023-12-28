@@ -12,6 +12,7 @@ class V1Controller extends AbstractController
     // This action will be used to show documentation of a facade.
     public function docAction(Request $request)
     {
+        return 'docAction';
         return [
             'annotations' => $this->getFacade()->getAnnotations(
                 $request->get('bundle')
